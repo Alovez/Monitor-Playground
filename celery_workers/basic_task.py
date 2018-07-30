@@ -4,15 +4,18 @@ from celery import Celery
 from celery.schedules import crontab
 from time import sleep
 import random
+import numpy as np
 
 
 app = Celery()
 
 @app.task
 def sleep_and_add(x, y):
-    sleep(80)
-    return x + y
-
+    a = np.random.rand(1000000, 1000000)
+    b = np.random.rand(1000000, 1000000)
+    c = a * b
+    d = a ** b
+    e = a.dot(b)
 
 app.conf.update(
     timezone='Asia/Shanghai',
