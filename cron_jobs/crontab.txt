@@ -1,0 +1,1 @@
+* * * * * python /code/cron_jobs/cron_task.py /dev/null 2>&1

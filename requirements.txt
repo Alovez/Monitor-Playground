@@ -1,0 +1,3 @@
+redis==2.10.6
+celery==4.2.0
+psutil==5.4.6
